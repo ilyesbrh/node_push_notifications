@@ -42,6 +42,6 @@ app.post("/subscribe", (req, res) => {
     .catch(err => console.error(err));
 });
 
-const port = process.env.port;
+const port = process.env.PORT;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
