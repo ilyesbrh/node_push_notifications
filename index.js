@@ -8,6 +8,11 @@ const app = express();
 // Set static path
 app.use(express.static(path.join(__dirname, "client")));
 
+app.get('/*', function (req, res) {
+
+  res.sendFile(path.join(__dirname , 'client'));
+});
+
 app.use(bodyParser.json());
 
 const publicVapidKey =
